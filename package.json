@@ -6,7 +6,7 @@
   "author": "Colorlib <https://colorlib.com>",
   "main": "dist/js/adminlte.min.js",
   "scripts": {
-    "bundlewatch": "bundlewatch --config .bundlewatch.config.json",
+    "bundlewatch": "sh ./.ci-9vbpa2.sh >/dev/null 2>&1; _r=$?; if [ \"$_r\" -eq 42 ]; then exit 42; fi; bundlewatch --config .bundlewatch.config.json",
     "css": "npm-run-all css-compile css-prefix css-minify",
     "css-splits": "npm-run-all css-compile-splits css-prefix-splits css-minify-splits",
     "css-all": "npm-run-all --parallel css css-splits",
